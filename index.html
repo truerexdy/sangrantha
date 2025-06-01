@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sangrantha</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favico.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.8/katex.min.css">
+</head>
+<body>
+    <div id="navParent">
+        <nav id="nav">
+            <div id="title"><a href="#" onclick="showBlogList()">ಸಂಗ್ರಂಥ</a></div>
+            <div id="backButton" onclick="showBlogList()">← Back</div>
+            <div id="themeToggle">☀️</div>
+        </nav>
+    </div>
+    
+    <div id="blogListView">
+        <div id="latestBlog">
+            <div id="latestText">Latest:</div>
+            <div id="latestBlogTitle"></div>
+        </div>
+        <div id="blogsGrid"></div>
+    </div>
+    
+    <div id="blogView">
+        <div id="blogTitle"></div>
+        <div id="blogContent"></div>
+    </div>
+    
+    <footer>
+        <div id="subTitle">📚 Written by <a href="https://truerexdy.github.io/rexdyweb/">Rexdy</a></div>
+    </footer>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/9.1.6/marked.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.8/katex.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
