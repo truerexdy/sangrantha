@@ -1,10 +1,10 @@
-:root{
+:root {
     --fg: #000000;
     --bg: #ffffff;
     --ac: #aaff00;
 }
 
-::selection{
+::selection {
     background-color: var(--ac);
     color: var(--fg);
 }
@@ -19,65 +19,52 @@
     src: url(Martian.ttf);
 }
 
-a{
+a {
     text-decoration: none;
     color: var(--fg);
 }
 
-body.dark a{
+body.dark a {
     text-decoration: none;
     color: var(--bg);
 }
 
-.dark{
+.dark {
     background-color: var(--fg);
     color: var(--bg);
 }
 
-body{
+body {
     font-family: martian;
     margin: 1vw;
 }
 
-#nav{
+#nav {
     display: flex;
+    justify-content: space-between;
 }
 
-#title{
+#title {
     font-family: baloo;
     font-weight: 1000;
     font-size: 2vw;
-    width: 20vw;
     user-select: none;
+    padding: 1vw;
 }
 
-#themeToggle{
+#themeToggle {
     text-align: right;
     cursor: pointer;
     font-size: 1.5vw;
-    width: 80vw;
     user-select: none;
+    padding: 1vw;
 }
 
-footer{
+footer {
     display: flex;
     justify-content: center;
 }
 
-#subTitle{
+#subTitle {
     font-size: 1vw;
-}
-
-#blogsGrid{
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1vw;
-  margin: 2vw 0;
-}
-
-.blog{
-  padding: 2vw;
-  border-radius: 0.5vw;
-  font-size: 1vw;
-  text-align: center;
 }

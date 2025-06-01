@@ -1,0 +1,122 @@
+:root{
+    --fg: #000000;
+    --bg: #ffffff;
+    --ac: #aaff00;
+}
+
+::selection{
+    background-color: var(--ac);
+    color: var(--fg);
+}
+
+@font-face {
+    font-family: baloo;
+    src: url(../../Baloo.ttf);
+}
+
+@font-face {
+    font-family: martian;
+    src: url(../../Martian.ttf);
+}
+
+a{
+    text-decoration: none;
+    color: var(--fg);
+}
+
+body.dark a{
+    text-decoration: none;
+    color: var(--bg);
+}
+
+.dark{
+    background-color: var(--fg);
+    color: var(--bg);
+}
+
+body{
+    font-family: martian;
+    margin: 1vw;
+}
+
+#nav{
+    display: flex;
+    justify-content: space-between;
+}
+
+#title{
+    font-family: baloo;
+    font-weight: 1000;
+    font-size: 2vw;
+    user-select: none;
+    padding: 1vw;
+}
+
+#themeToggle{
+    text-align: right;
+    cursor: pointer;
+    font-size: 1.5vw;
+    user-select: none;
+    padding: 1vw;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+}
+
+#subTitle{
+    font-size: 1vw;
+}
+
+#blogsGrid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1vw;
+  margin: 4vw 5vh;
+}
+
+.blog{
+    padding: 2vh;
+    font-size: 1vw;
+    text-align: left;
+    font-weight: 600;
+}
+
+.blog:hover{
+    padding: 2vh;
+    font-size: 1vw;
+    text-align: left;
+    font-weight: 600;
+    background-color: var(--fg);
+    color: var(--ac);
+}
+
+.blog:hover a{
+    color: var(--ac);
+}
+
+.lastUpdatedTime{
+    font-size: 0.75vw;
+    user-select: none;
+}
+
+#latestBlog{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    margin: 5vh;
+}
+
+#latestText{
+    font-weight: 700;
+    font-size: 2vw;
+    margin-right: 3vw;
+    margin-left: 1vw;
+}
+
+#latestBlogTitle{
+    font-weight: 1000;
+    font-size: 5vh;
+    max-width: 35vw;
+}

@@ -11,6 +11,31 @@ toggleButton.addEventListener('click', () => {
   console.log('toggleButton:', isDark);
 });
 
+fetch('blogList.json')
+  .then(response => response.json())
+  .then(blogs => {
+    const blogsGrid = document.getElementById('blogsGrid');
+    blogs.forEach(blog => {
+     const blogDiv = document.createElement('div');
+      const dateTime = document.createElement('p');
+      const titleLink = document.createElement('a');
+      blogDiv.className = 'blog';
+      titleLink.textContent = blog.title;
+      titleLink.href = `blogs/${blog.id.toString()}`;
+      blogDiv.appendChild(titleLink);
+      dateTime.textContent = new Date(blog.lastUpdatedTime).toLocaleDateString();
+      dateTime.className = 'lastUpdatedTime';
+      blogDiv.appendChild(dateTime);
+      blogsGrid.appendChild(blogDiv);
+    });
+    const latestBlogTitleElement = document.getElementById("latestBlogTitle");
+    const latestBlogLink = document.createElement('a');
+    latestBlogLink.textContent = blogs[0].title;
+    latestBlogLink.href = `blogs/${blogs[0].id.toString()}`;
+    latestBlogTitleElement.innerHTML = '';
+    latestBlogTitleElement.appendChild(latestBlogLink);
+  });
+
 window.addEventListener('DOMContentLoaded', () => {
   const isDark = localStorage.getItem('theme') === 'dark';
   if (isDark) {
